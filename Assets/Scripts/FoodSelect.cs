@@ -6,16 +6,15 @@ using UnityEngine.UI;
 
 public class FoodSelect : MonoBehaviour
 {
-    private bool hisselect = false;
-    private bool pisselect = false;
-    public Button button_H;
-    public Button button_P;
-    public Color initcolor;
-    public Color selectcolor;
+    Image image;
+    public Sprite selected;
+    public Sprite noselection;
+    public bool isselect;
     // Start is called before the first frame update
     void Start()
     {
-        
+        image = GetComponent<Image>();
+        isselect = true;
     }
 
     // Update is called once per frame
@@ -23,48 +22,17 @@ public class FoodSelect : MonoBehaviour
     {
         
     }
-    public void SelectFood_H()
+    public void SelectFood()
     {
-        ColorBlock cb = button_H.colors;
-        if(hisselect == false)
+        if(isselect == false)
         {
-            cb.normalColor = selectcolor;
-            cb.highlightedColor = selectcolor;
-            cb.pressedColor = selectcolor;
-            cb.selectedColor = selectcolor;
-            button_H.colors = cb;
-            hisselect = true;
+            image.sprite = selected;
+            isselect = true;
         }
-        else if(hisselect ==true)
+        else if(isselect ==true)
         {
-            cb.normalColor = initcolor;
-            cb.highlightedColor = initcolor;
-            cb.pressedColor = initcolor;
-            cb.selectedColor = initcolor;
-            button_H.colors = cb;
-            hisselect = false;
-        }
-    }
-    public void SelectFood_P()
-    {
-        ColorBlock cb = button_P.colors;
-        if(pisselect == false)
-        {
-            cb.normalColor = selectcolor;
-            cb.highlightedColor = selectcolor;
-            cb.pressedColor = selectcolor;
-            cb.selectedColor = selectcolor;
-            button_P.colors = cb;
-            pisselect = true;
-        }
-        else if(pisselect ==true)
-        {
-            cb.normalColor = initcolor;
-            cb.highlightedColor = initcolor;
-            cb.pressedColor = initcolor;
-            cb.selectedColor = initcolor;
-            button_P.colors = cb;
-            pisselect = false;
+            image.sprite = noselection;
+            isselect = false;
         }
     }
 }
