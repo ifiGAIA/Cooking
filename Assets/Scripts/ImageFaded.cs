@@ -8,6 +8,7 @@ public class ImageFaded : MonoBehaviour
     Image image;
     private float i;
     public float fadspeed = 0.1f;
+    public int time;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,8 @@ public class ImageFaded : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Fade();
+        Invoke("Fade",time);
+        // Fade();
     }
     void Fade()
     {

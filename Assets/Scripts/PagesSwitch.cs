@@ -14,8 +14,8 @@ public class PagesSwitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        page1.SetActive(false);
-        page2.SetActive(false);
+        // page1.SetActive(true);
+        // page2.SetActive(false);
         p1 = false;
         p2 = false;
         Time();
@@ -33,7 +33,7 @@ public class PagesSwitch : MonoBehaviour
     void InitPageToPage1()
     {
         pageinit.SetActive(false);
-        page1.SetActive(true);
+        // page1.SetActive(true);
         p1 = true;
     }
     public void SwitchtonextPages()
