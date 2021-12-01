@@ -49,10 +49,12 @@ public class IngredientsManager : MonoBehaviour
         if(ingredient1)
         {
             ingredient1 = false;
+            GameManager.instance.ingredient1 = false;
         }
         else
         {
             ingredient1 = true;
+            GameManager.instance.ingredient1 = true;
         }
     }
     public void Ingredient2()
@@ -60,10 +62,12 @@ public class IngredientsManager : MonoBehaviour
         if(ingredient2)
         {
             ingredient2 = false;
+            GameManager.instance.ingredient2 = false;
         }
         else
         {
             ingredient2 = true;
+            GameManager.instance.ingredient2 = true;
         }
     }
     public void Ingredient3()
@@ -71,10 +75,12 @@ public class IngredientsManager : MonoBehaviour
         if(ingredient3)
         {
             ingredient3 = false;
+            GameManager.instance.ingredient3 = false;
         }
         else
         {
             ingredient3 = true;
+            GameManager.instance.ingredient3 = true;
         }
     }
     public void Ingredient4()
@@ -82,10 +88,12 @@ public class IngredientsManager : MonoBehaviour
         if(ingredient4)
         {
             ingredient4 = false;
+            GameManager.instance.ingredient4 = false;
         }
         else
         {
             ingredient4 = true;
+            GameManager.instance.ingredient4 = true;
         }
     }
     public void Ingredient5()
@@ -93,10 +101,25 @@ public class IngredientsManager : MonoBehaviour
         if(ingredient5)
         {
             ingredient5 = false;
+            GameManager.instance.ingredient5 = false;
         }
         else
         {
             ingredient5 = true;
+            GameManager.instance.ingredient5 = true;
         }
+    }
+    public void Page1()
+    {
+        ingredient1 = true;
+        ingredient2 = true;
+        ingredient3 = true;
+        ingredient4 = true;
+        ingredient5 = true;
+        GameManager.instance.ingredient1 = true;
+        GameManager.instance.ingredient2 = true;
+        GameManager.instance.ingredient3 = true;
+        GameManager.instance.ingredient4 = true;
+        GameManager.instance.ingredient5 = true;
     }
 }

@@ -34,4 +34,10 @@ public class IngredientsSelect : MonoBehaviour
             isselect = false;
         }
     }
+    public void Page1()
+    {
+        isselect = true;
+        image.sprite = selected;
+
+    }
 }
