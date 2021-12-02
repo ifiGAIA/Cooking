@@ -33,7 +33,7 @@ public class IngredientsManager : MonoBehaviour
             AR = true;
         }
     }
-    public void ARlearning()
+    public void ARlearning()//轉換頁面去AR教學
     {
         if(AR)
         {
