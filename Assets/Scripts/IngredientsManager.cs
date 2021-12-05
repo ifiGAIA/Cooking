@@ -24,7 +24,7 @@ public class IngredientsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ingredient1==false&&ingredient2==false&&ingredient3==false&&ingredient4==false&&ingredient5==false)
+        if(ingredient4==false || ingredient5==false)
         {
             AR = false;
         }
@@ -41,7 +41,7 @@ public class IngredientsManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("請選擇至少一個食材");
+            Debug.Log("披薩怎麼能少了醬料或餅皮呢?");
         }
     }
     public void Ingredient1()
